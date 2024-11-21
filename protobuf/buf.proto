@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package msg;
+
+option go_package = "example.com/m/protbuf";
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayMsg ( MsgRequest) returns ( MsgReply) {}
+}
+
+// The request message containing the user's name.
+message  MsgRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message MsgReply {
+  string message = 1;
+}
